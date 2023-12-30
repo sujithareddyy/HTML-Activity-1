@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    header, nav, section, article, footer {
-      display: block;
-    }
+        .row {
+            display: flex;
+            width: 100%;
+        }
 
-    #container {
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      height: 100vh;
-    }
+        .column {
+            flex: 1;
+            box-sizing: border-box;
+            padding: 20px;
+        }
 
-    #logo {
-      grid-row: 1;
-      grid-column: 1;
-    }
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
 
-    #header {
-      grid-row: 1;
-      grid-column: 2;
-      text-align: right;
-      padding: 10px;
-    }
+        .header {
+            text-align: right;
+        }
 
-    #navbar {
-      grid-row: 2;
-      grid-column: span 3;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      background-color: #f0f0f0;
-      padding: 10px;
-    }
+        .services {
+            display: flex;
+            flex-direction: column;
+        }
 
-    #services {
-      grid-row: 3;
-      grid-column: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
+        .links {
+            display: flex;
+            justify-content: space-around;
+        }
 
-    #description {
-      grid-row: 3;
-      grid-column: span 2;
-      padding: 10px;
-    }
-  </style>
+        .links a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <div id="container">
+
     <!-- First Row -->
-    <div id="logo">
-      <img src="your-logo.png" alt="Logo" width="100" height="50">
-    </div>
-    <div id="header">
-      <h1>Your Website Header</h1>
+    <div class="row">
+        <!-- First Column (Logo) -->
+        <div class="column">
+            <img src="image.jpg" alt="Logo" class="logo">
+        </div>
+
+        <!-- Second Column (Website Header) -->
+        <div class="column header">
+            <h1>Your Website Header</h1>
+        </div>
     </div>
 
-    <!-- Second Row -->
-    <div id="navbar">
-      <a href="home.html">Home</a>
-      <a href="login.html">Login</a>
-      <a href="registration.html">Registration</a>
-      <a href="catalogue.html">Catalogue</a>
-      <a href="cart.html">Cart</a>
-      <a href="contactus.html">Contact Us</a>
+    <!-- Second Row with Links -->
+    <div class="row links">
+        <!-- Hyperlinks for navigation -->
+        <a href="https://www.amazon.in/">Home</a>
+        <a href="https://www.amazon.in/s?k=login">Login</a>
+        <a href="https://www.amazon.in/">Registration</a>
+        <a href="https://www.amazon.in/">Catalogue</a>
+        <a href="https://www.amazon.in/">Cart</a>
+        <a href="https://www.amazon.in/gp/help/customer/display.html">Contact Us</a>
+
     </div>
 
     <!-- Third Row -->
-    <div id="services">
-      <a href="service1.html">Service 1</a>
-      <a href="service2.html">Service 2</a>
-      <!-- Add more service links as needed -->
+    <div class="row">
+        <!-- Left Column (Services) -->
+        <div class="column services">
+            <a href="https://www.amazon.com/">Amazon</a>
+            <a href="https://www.myntra.com/">Myntra</a>
+            <a href="https://www.ajio.com/">Ajio</a>
+            <!-- Add more service links as needed -->
+        </div>
+        <div class="column">
+            <h2>Contact Us</h2>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123 Main Street, Cityville</p>
+        </div>
+
+
+        <!-- Right Column (Description) -->
+        <div class="column">
+            <p>This version includes information about Amazon and its key features, such as registration, login, contact details, shopping cart, and product catalog. </p>
+        </div>
     </div>
-    <div id="description">
-      <p>This is the description of the webpage.</p>
-    </div>
-  </div>
+
 </body>
 </html>
